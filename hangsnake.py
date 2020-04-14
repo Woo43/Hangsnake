@@ -1,6 +1,7 @@
 print("Hangsnake!\n")
 # enter secret here
-secretword = "poyo"
+secretword = input("Select a secret word. ")
+print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
 secretlist = list(secretword.upper())
 length = len(secretlist)
 mismatch = 0
