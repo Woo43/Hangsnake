@@ -17,6 +17,7 @@ print("\n")
 letters = []
 while oofcount < 5 and winner == False:
     guess = input("What letter do you want to guess? ").upper()
+    truel = length - letters_correct
     if guess in letters:
         print('You already guessed that!')
     else:
@@ -31,7 +32,7 @@ while oofcount < 5 and winner == False:
                 else:
                     print("_")
                     mismatch = mismatch + 1
-                    if mismatch == len(secretlist):
+                    if mismatch == truel:
                         oofcount = oofcount + 1
                         mismatch = 0
             if oofcount == 5:
