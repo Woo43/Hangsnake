@@ -1,7 +1,7 @@
 print("Hangsnake!\n")
 # enter secret here
 secretword = input("Select a secret word. ")
-maxguesses = int.(input('How manny errors do you want to give? '))
+maxguesses = int(input('How manny errors do you want to give? '))
 print(
     "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 )
