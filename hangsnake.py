@@ -1,7 +1,6 @@
 print("Hangsnake!\n")
-# enter secret here
 secretword = input("Select a secret word. ")
-maxguesses = int.(input('How manny errors do you want to give? '))
+maxguesses = int(input("How manny errors do you want to give? "))
 print(
     "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 )
@@ -17,6 +16,7 @@ print("\n")
 for x in secretlist:
     print("_")
 print("\n")
+print("You have " + maxguesses + " guesses." "\n")
 letters = []
 while oofcount < maxguesses and winner == False:
     guess = input("What letter do you want to guess? ").upper()
@@ -33,13 +33,8 @@ while oofcount < maxguesses and winner == False:
         for x in secretlist:
             if x in letters:
                 print(x)
-#                mismatch = 0
             else:
                 print("_")
-#                mismatch = mismatch + 1
-#                if mismatch == dedupelen:
-#                    oofcount = oofcount + 1
-#                    mismatch = 0
         if oofcount == maxguesses:
             print("Game over.")
         elif letters_correct == dedupelen:
