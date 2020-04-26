@@ -1,0 +1,4 @@
+1. Input validations.
+2. Print without new lines. 
+2.5. Why has 2 not happened yet? ¯\_(ツ)_/¯
+3. Collecting secret words from 2-player games.
