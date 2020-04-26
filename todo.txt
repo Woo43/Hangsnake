@@ -1,2 +1,1 @@
-1. Print without new lines.
-2. Collecting secret words from 2-player games.
+1. Collecting secret words from 2-player games.

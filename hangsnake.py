@@ -47,8 +47,10 @@ while oofcount < maxguesses and winner == False:
             letters_correct = letters_correct + 1
         else:
             oofcount = oofcount + 1
-            print("You have " + str(maxguesses-oofcount) + " incorrect guesses remaining.")
-        letters.append(guess)
+            if maxguesses-oofcount > 1:
+                print("You have " + str(maxguesses-oofcount) + " incorrect guesses remaining.")
+            else:
+                print("You have 1 incorrect guesses remaining.")
         for x in secretlist:
             if x in letters:
                 print(x,end =" ")
