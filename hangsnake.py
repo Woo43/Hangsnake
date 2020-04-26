@@ -10,7 +10,7 @@ if playercount == 2:
     print(
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
     )
-if playercount == 1:
+elif playercount == 1:
     secretword = random.choice(the_list_to_end_all_lists)
     maxguesses = 5
 secretlist = list(secretword.upper())
