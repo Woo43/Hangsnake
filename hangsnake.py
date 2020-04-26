@@ -1,5 +1,6 @@
 my_list = open("wordlist.txt").readlines()
-print(my_list)
+the_list_to_end_all_lists = my_list.split(",") 
+print(the_list_to_end_all_lists)
 print("Hangsnake!\n")
 secretword = input("Select a secret word. ")
 maxguesses = int(input("How manny errors do you want to give? "))
