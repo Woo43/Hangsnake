@@ -12,7 +12,11 @@ while playercount != 1 and playercount != 2:
         playercount = int(input("Are you playing with 1 or 2 players? "))
 if playercount == 2:
     secretword = input("Select a secret word. ")
-    maxguesses = int(input("How manny errors do you want to give? "))
+    try:
+        maxguesses = int(input("How manny errors do you want to give? "))
+    except ValueError:
+        print("Number, please.")
+        maxguesses = int(input("How manny errors do you want to give? "))
     print(
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
     )
