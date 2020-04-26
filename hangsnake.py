@@ -25,7 +25,6 @@ elif playercount == 1:
     maxguesses = 5
 secretlist = list(secretword.upper())
 length = len(secretlist)
-mismatch = 0
 oofcount = 0
 letters_correct = 0
 dedupelist = list(dict.fromkeys(secretlist))
@@ -33,7 +32,7 @@ dedupelen = len(dedupelist)
 winner = False
 print("\n")
 for x in secretlist:
-    print("_")
+    print("_", end =" ")
 print("\n")
 print("You have " + str(maxguesses) + " incorrect guesses remaining." "\n")
 letters = []
@@ -52,9 +51,9 @@ while oofcount < maxguesses and winner == False:
         letters.append(guess)
         for x in secretlist:
             if x in letters:
-                print(x)
+                print(x,end =" ")
             else:
-                print("_")
+                print("_",end =" ")
         if oofcount == maxguesses:
             print("Game over. The secret word was " + secretword + ".")
         elif letters_correct == dedupelen:
