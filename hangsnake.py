@@ -1,12 +1,18 @@
+import random
+
 my_list = open("wordlist.txt").readlines()
-the_list_to_end_all_lists = my_list.split(",") 
-print(the_list_to_end_all_lists)
+the_list_to_end_all_lists = my_list[0].split(",")
 print("Hangsnake!\n")
-secretword = input("Select a secret word. ")
-maxguesses = int(input("How manny errors do you want to give? "))
-print(
-    "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-)
+playercount = int(input("Are you playing with one or two players? "))
+if playercount == 2:
+    secretword = input("Select a secret word. ")
+    maxguesses = int(input("How manny errors do you want to give? "))
+    print(
+        "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    )
+if playercount == 1:
+    secretword = random.choice(the_list_to_end_all_lists)
+    maxguesses = 5
 secretlist = list(secretword.upper())
 length = len(secretlist)
 mismatch = 0
@@ -19,7 +25,7 @@ print("\n")
 for x in secretlist:
     print("_")
 print("\n")
-print("You have " + maxguesses + " guesses." "\n")
+print("You have " + str(maxguesses) + " guesses." "\n")
 letters = []
 while oofcount < maxguesses and winner == False:
     guess = input("What letter do you want to guess? ").upper()
@@ -39,7 +45,7 @@ while oofcount < maxguesses and winner == False:
             else:
                 print("_")
         if oofcount == maxguesses:
-            print("Game over.")
+            print("Game over. The secret word was " + secretword + ".")
         elif letters_correct == dedupelen:
             winner = True
 if winner == True:
