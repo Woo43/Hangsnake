@@ -35,7 +35,7 @@ print("\n")
 for x in secretlist:
     print("_")
 print("\n")
-print("You have " + str(maxguesses) + " incorrect guesses." "\n")
+print("You have " + str(maxguesses) + " incorrect guesses remaining." "\n")
 letters = []
 while oofcount < maxguesses and winner == False:
     guess = input("What letter do you want to guess? ").upper()
@@ -48,6 +48,7 @@ while oofcount < maxguesses and winner == False:
             letters_correct = letters_correct + 1
         else:
             oofcount = oofcount + 1
+            print("You have " + str(maxguesses-oofcount) + " incorrect guesses remaining.")
         letters.append(guess)
         for x in secretlist:
             if x in letters:
