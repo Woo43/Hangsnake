@@ -25,7 +25,7 @@ print("\n")
 for x in secretlist:
     print("_")
 print("\n")
-print("You have " + str(maxguesses) + " guesses." "\n")
+print("You have " + str(maxguesses) + " incorrect guesses." "\n")
 letters = []
 while oofcount < maxguesses and winner == False:
     guess = input("What letter do you want to guess? ").upper()
