@@ -1,7 +1,4 @@
 my_list = open("wordlist.txt").readlines()
-for word in my_list:
-    word = word.strip('\n')
-clean_list = [i.replace('\n','') for i in my_list]
 print(my_list)
 print("Hangsnake!\n")
 secretword = input("Select a secret word. ")
@@ -21,7 +18,7 @@ print("\n")
 for x in secretlist:
     print("_")
 print("\n")
-print("You have " + str(maxguesses) + " guesses. \n")
+print("You have " + maxguesses + " guesses." "\n")
 letters = []
 while oofcount < maxguesses and winner == False:
     guess = input("What letter do you want to guess? ").upper()
