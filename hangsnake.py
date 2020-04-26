@@ -3,7 +3,7 @@ import random
 my_list = open("wordlist.txt").readlines()
 the_list_to_end_all_lists = my_list[0].split(",")
 print("Hangsnake!\n")
-playercount = int(input("Are you playing with one or two players? "))
+playercount = int(input("Are you playing with 1 or 2 players? "))
 if playercount == 2:
     secretword = input("Select a secret word. ")
     maxguesses = int(input("How manny errors do you want to give? "))
