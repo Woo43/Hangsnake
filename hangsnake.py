@@ -4,7 +4,7 @@ my_list = open("wordlist.txt").readlines()
 the_list_to_end_all_lists = my_list[0].split(",")
 print("Hangsnake!\n")
 playercount = 0
-while playercount == 1 or playercount == 2:
+while playercount != 1 and playercount != 2:
     playercount = int(input("Are you playing with 1 or 2 players? "))
 if playercount == 2:
     secretword = input("Select a secret word. ")
