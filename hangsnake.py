@@ -1,5 +1,10 @@
 import random
-my_list = open("wordlist.txt").readlines()
+blob = input("Smash characters or words? ")
+blobstring = blob.upper()
+if blobstring == "WORDS":
+    my_list = open("wordlist.txt").readlines()
+if blobstring == "SMASH":
+    my_list = open("smashlist.txt").readlines()
 the_list_to_end_all_lists = my_list[0].split(",")
 print("Hangsnake!\n")
 playercount = 0
