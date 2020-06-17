@@ -1,11 +1,4 @@
 import random
-blob = input("Smash characters or words? ")
-blobstring = blob.upper()
-if blobstring == "WORDS":
-    my_list = open("wordlist.txt").readlines()
-if blobstring == "SMASH":
-    my_list = open("smashlist.txt").readlines()
-the_list_to_end_all_lists = my_list[0].split(",")
 print("Hangsnake!\n")
 playercount = 0
 while playercount != 1 and playercount != 2:
@@ -25,8 +18,17 @@ if playercount == 2:
         "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
     )
 elif playercount == 1:
-    secretword = random.choice(the_list_to_end_all_lists)
     maxguesses = 5
+    blob = input("Smash characters, Pokemon, or words? ")
+    blobstring = blob.upper()
+    if blobstring == "WORDS":
+        my_list = open("wordlist.txt").readlines()
+    elif blobstring == "SMASH":
+        my_list = open("smashlist.txt").readlines()
+    else:
+        my_list = open("pokemonlist.txt").readlines()
+    the_list_to_end_all_lists = my_list[0].split(",")
+    secretword = random.choice(the_list_to_end_all_lists)
 secretlist = list(secretword.upper())
 length = len(secretlist)
 mismatch = 0
