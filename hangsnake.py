@@ -39,7 +39,7 @@ dedupelen = len(dedupelist)
 winner = False
 print("\n")
 for x in secretlist:
-    print("_", end =" ")
+    print("_", end=" ")
 print("\n")
 print("You have " + str(maxguesses) + " incorrect guesses remaining." "\n")
 letters = []
@@ -58,9 +58,9 @@ while oofcount < maxguesses and winner == False:
         letters.append(guess)
         for x in secretlist:
             if x in letters:
-                print(x,end =" ")
+                print(x, end=" ")
             else:
-                print("_",end =" ")
+                print("_", end=" ")
         if oofcount == maxguesses:
             print("Game over. The secret word was " + secretword + ".")
         elif letters_correct == dedupelen:
