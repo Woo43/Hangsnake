@@ -1,4 +1,4 @@
 
 # Hangsnake
 
-A python hangman.
+*This program is held together with tape and my sheer willpower.*
